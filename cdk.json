@@ -1,0 +1,16 @@
+{
+  "app": "npx tsx bin/jawsug-calendar-agent.ts",
+  "context": {
+    "projectName": "jaws-calendar-agent",
+    "projectTag": "personal",
+    "formSubmitEnabled": "false",
+    "scheduleState": "DISABLED",
+    "submitterName": "みのるん（AgentCoreが代筆）",
+    "bedrockModelId": "us.anthropic.claude-sonnet-4-6",
+    "connpassEventsUrl": "https://jawsug.connpass.com/event/",
+    "jawsugCalendarUrl": "https://jaws-ug.jp/calendar/",
+    "jawsugCalendarId": "bm4nl4f76dop3h66n7a4ea67r8@group.calendar.google.com",
+    "jawsugCalendarApiKey": "",
+    "googleFormUrl": ""
+  }
+}
