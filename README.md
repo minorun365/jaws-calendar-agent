@@ -1,11 +1,8 @@
 # JAWS-UG 東京イベントカレンダー登録エージェント
 
-JAWS-UG 東京の connpass 直近イベントを毎日 12:00 JST に確認し、未来イベントが JAWS-UG イベントカレンダーへ未登録なら Google フォームへ登録する AgentCore Runtime + Strands Agents のアンビエントエージェント。
+JAWS-UG 東京の勉強会を、JAWS-UG のイベントカレンダーへ自動で登録するエージェントです。毎日12時（日本時間）に connpass の直近のイベントを確かめ、これから開かれるのにカレンダーへ載っていないものがあれば、登録用の Google フォームへ送ります。人に呼ばれなくても決まった時刻に自分で動く「アンビエントエージェント」として、Bedrock AgentCore Runtime と Strands Agents で作っています。
 
-公開版のデフォルトは安全側で、`formSubmitEnabled=false` / Scheduler `DISABLED`。
-実運用では Google Form URL や Calendar API key などを CDK context で渡す。
-
-記入者氏名は必ず `みのるん（AgentCoreが代筆）` とする。
+公開版は、そのままデプロイしてもフォームを送らず、定期実行も止まった状態で始まります。実際に使うときは、フォームのURLやカレンダーのAPIキーなどを CDK の context で渡して有効にします。フォームの記入者名は、エージェントが代わりに書いたと分かる名前（既定は「みのるん（AgentCoreが代筆）」）にしています。
 
 ## 構成
 
