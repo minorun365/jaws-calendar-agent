@@ -7,7 +7,7 @@
 - Region: `us-east-1` を想定
 - CDK deploy は CloudFormation Express mode を使う
 - 記入者氏名は `みのるん（AgentCoreが代筆）`
-- 公開リポジトリには実 Google Form URL と Google Calendar API key を含めない
+- 公開リポジトリには実際の Google Form URL と Google Calendar API key を含めない
 
 ## 検証
 
@@ -38,10 +38,10 @@ npx cdk deploy --all --express --require-approval never \
 
 ## 実送信を有効化する場合
 
-外部 Google フォームへの送信になるため、リリース前の初回は必ず 1 件だけレビューする。
+外部の Google フォームへ送信するため、リリース前の初回は必ず 1 件だけレビューする。
 
 1. `preview_event` の結果をレビュー担当者へ共有する。
-2. レビュー担当者から送信承認を得る。
+2. レビュー担当者から送信の承認を得る。
 3. Scheduler は `DISABLED` のまま、`formSubmitEnabled=true` でデプロイする。
 4. `submit_approved_event` を 1 件だけ invoke する。
 5. 送信結果を確認する。
@@ -61,4 +61,4 @@ npx cdk deploy --all --express --require-approval never \
   -c 'submitterName=みのるん（AgentCoreが代筆）'
 ```
 
-初回送信レビュー後、日次運用を開始する場合だけ `scheduleState=ENABLED` で再デプロイする。
+初回の送信レビューが終わったあと、日次運用を始めるときだけ `scheduleState=ENABLED` で再デプロイする。
